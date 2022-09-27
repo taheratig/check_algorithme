@@ -1,0 +1,46 @@
+
+//  The length of the sentence
+
+var sentence : STRING := "go my code.";
+var num_char : INTEGER := 0;
+BEGIN
+
+   FOR  i FROM 0 TO sentence.length DO
+    IF (sentence[i] != ' ' )THEN
+        num_char :=num_char+1 ;
+    END_IF
+   END_FOR 
+
+   Write(num_char);
+END
+
+// The number of words in the sentence
+  
+var sentence : STRING := "go my code.";
+var num_words : INTEGER := 0;
+BEGIN
+
+   FOR  i FROM 0 TO sentence.length DO
+    IF (sentence[i] == ' ' )THEN
+        num_words :=num_words+1 ;
+    END_IF
+   END_FOR 
+
+   Write(num_words);
+END
+
+// The number of vowels in the sentence
+
+var stc : STRING := "go my code.";
+var num_vowels : INTEGER := 0;
+BEGIN
+
+   FOR  i FROM 0 TO sentence.length DO
+    stc[i] := lowercase(stc[i]);
+    IF (stc[i] == 'a' || stc[i] == 'e' || stc[i] == 'i' || stc[i] == 'o' || stc[i] == 'u' || stc[i] == 'Y')THEN
+        num_vowels :=num_vowels+1 ;
+    END_IF
+   END_FOR 
+
+   Write(num_vowels);
+END
